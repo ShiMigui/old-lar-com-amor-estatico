@@ -1,0 +1,127 @@
+header {
+    background-color: $orange;
+    height: $alt-header;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    #pesquisa {
+        display: flex;
+        width: 100%;
+        max-width: 400px;
+
+        :first-child {
+            border-radius: 10px 0 0 10px;
+            width: 100%;
+        }
+
+        :last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+    #campo-navegacao {
+        gap: 10px;
+
+        nav {
+            display: flex;
+            gap: 5px;
+
+            a {
+                padding: 10px;
+            }
+        }
+
+        #account {
+            gap: 5px;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        #menu-hamburguer {
+            display: none;
+        }
+    }
+}
+
+header + main{
+    margin-top: $alt-header;
+    padding: 10px;
+}
+
+footer{
+    background-color: $orange;
+    padding: 10px;
+    .logo{
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        nav {
+            position: fixed;
+            transition: 0.3s;
+            z-index: -10;
+            right: 0;
+            width: 100%;
+            background-color: darken($color: $orange, $amount: 0.1);
+            flex-direction: column;
+            align-items: center;
+
+            &[ativo=false] {
+                top: -50%;
+            }
+
+            &[ativo=true] {
+                top: $alt-header;
+            }
+        }
+
+        #menu-hamburguer {
+            width: 24px;
+
+            &[ativo=false] {
+                justify-content: space-between;
+            }
+
+            &[ativo=true] {
+                justify-content: center;
+
+                .line:nth-child(1) {
+                    display: none;
+                }
+
+                .line:nth-child(2) {
+                    transform: rotateZ(45deg);
+                }
+
+                .line:nth-child(3) {
+                    transform: rotateZ(-45deg);
+                    margin-top: -2px;
+                }
+            }
+
+            .line {
+                width: 100%;
+                height: 2px;
+                transition: 0.3s;
+                background-color: white;
+            }
+        }
+    }
+}

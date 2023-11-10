@@ -1,0 +1,55 @@
+.flex {
+    display: flex;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.alignEnd {
+    align-items: end;
+}
+
+.alignStart {
+    align-items: start;
+}
+
+.justBetween {
+    justify-content: space-between;
+}
+
+.justCenter {
+    justify-content: center;
+}
+
+.justEnd {
+    justify-content: end;
+}
+
+
+.grid {
+    --grid: 1;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(var(--grid), 1fr);
+}
+
+.grid2 {
+    @extend .grid;
+    --grid: 2;
+}
+
+.grid4 {
+    @extend .grid;
+    --grid: 4;
+}
+
+.grid6 {
+    @extend .grid;
+    --grid: 6;
+}

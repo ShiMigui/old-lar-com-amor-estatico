@@ -1,0 +1,46 @@
+input[type=image],
+input[type=text],
+.input {
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 5px;
+    border: none;
+}
+
+input[type=submit],
+.button,
+button {
+    box-shadow: 0 0 10px rgba(#000000, 0.1);
+    background-color: $orange;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: white;
+    padding: 10px;
+    border: none;
+
+    &:active,
+    &:disabled {
+        box-shadow: none;
+    }
+
+    &:not(:disabled):active {
+        background-color: darken($orange, 10%);
+        transform: scale(90%);
+    }
+
+    &:disabled {
+        background-color: darken($orange, 30%);
+        color: gray;
+    }
+}
+
+.square {
+    aspect-ratio: 1 / 1;
+}
+
+.limiter {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
