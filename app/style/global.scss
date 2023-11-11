@@ -3,22 +3,124 @@
 @import "./imp/display.scss";
 @import "./imp/header.scss";
 @import "./imp/texto.scss";
+@import "./imp/anuncio.scss";
+
+.list {
+    gap: 2px;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+
+    .item-list {
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        padding: 5px;
+
+        &.dark {
+            background-color: rgba($orange, 0.2);
+        }
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
 
 * {
-    font-family: "karla", Arial, Helvetica, sans-serif;
+    font-family: "Karla", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     background-color: rgb(240, 240, 240);
 }
 
-main{
+main {
     min-height: 100vh;
 
-    .content-box{
+    .content-box {
         margin: 25px 0;
     }
+}
+
+#campo-pesquisa {
+    max-width: 500px;
+    margin-inline: auto;
+
+    &>*:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &>div:first-child {
+        width: 100%;
+        display: flex;
+
+        input {
+            height: 30px;
+        }
+
+        :first-child {
+            width: 100%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        :last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+#anuncio-panel {
+    gap: 10px;
+
+    #left-panel {
+        width: 30%;
+
+        .organizacaoAnuncio {
+            margin-top: 10px;
+            flex-direction: row-reverse;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 200px;
+            align-items: center ;
+
+            .images {
+                width: 30%;
+                min-width: 30%;
+            }
+        }
+    }
+
+    #right-panel {
+        width: 70%;
+        padding: 10px;
+    }
+}
+
+.form {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    #anuncio-panel {
+        flex-wrap: wrap;
+
+        #left-panel,
+        #right-panel {
+            width: 100%;
+        }
+    }
+}
+
+datalist {
+    display: block;
+    height: 0;
 }

@@ -15,13 +15,14 @@ header {
     }
 
     .logo {
-        height: 60px;
+        height: 40px;
     }
 
     #pesquisa {
         display: flex;
         width: 100%;
         max-width: 400px;
+        height: 30px;
 
         :first-child {
             border-radius: 10px 0 0 10px;
@@ -42,6 +43,24 @@ header {
 
             a {
                 padding: 10px;
+                position: relative;
+
+                &::after {
+                    background-color: white;
+                    transition: 0.3s;
+                    display: block;
+                    height: 2px;
+                    content: "";
+                    width: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover::after,
+                &[ativo=true]::after {
+                    width: 100%;
+                }
             }
         }
 
@@ -51,22 +70,19 @@ header {
             border-radius: 10px;
             padding: 5px;
         }
-
-        #menu-hamburguer {
-            display: none;
-        }
     }
 }
 
-header + main{
+header+main {
     margin-top: $alt-header;
     padding: 10px;
 }
 
-footer{
+footer {
     background-color: $orange;
     padding: 10px;
-    .logo{
+
+    .logo {
         height: 40px;
     }
 }

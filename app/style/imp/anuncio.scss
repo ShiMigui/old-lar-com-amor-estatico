@@ -1,0 +1,70 @@
+.anuncio {
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .images,
+    .texts {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .images {
+        transition: 0.5s;
+        height: 100%;
+    }
+
+    .texts *:not(.link) {
+        color: black;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        .images {
+            padding: 5px;
+        }
+    }
+}
+
+.photoAnuncio{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.animalAnuncio {
+    @extend .anuncio;
+}
+
+.animalPhoto {
+    @extend .photoAnuncio;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+}
+
+.organizacaoAnuncio {
+    @extend .anuncio;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+}
+
+.organizacaoPhoto {
+    @extend .photoAnuncio;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+}
+
+.eventoAnuncio {
+    @extend .anuncio;
+}
+
+.eventoPhoto {
+    @extend .photoAnuncio;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+}

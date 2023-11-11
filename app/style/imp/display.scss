@@ -1,8 +1,10 @@
 .flex {
+    gap: 10px;
     display: flex;
 }
 
 .flexColumn {
+    gap: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -52,4 +54,10 @@
 .grid6 {
     @extend .grid;
     --grid: 6;
+}
+
+@media screen and (max-width: 600px) {
+    .grid2{--grid:1;}
+    .grid4{--grid:2;}
+    .grid6{--grid:3;}
 }

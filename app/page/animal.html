@@ -1,0 +1,72 @@
+<title>Animal</title>
+
+<main class="limiter">
+    <article class="content-box flex" id="anuncio-panel">
+        <section id="left-panel">
+            <img src="" alt="" class="animalPhoto">
+
+            <a href="./organizacao.html" cd="" class="organizacaoAnuncio">
+                <div class="images"><img class="organizacaoPhoto" src="" alt=""></div>
+                <div class="texts">
+                    <h4>Nome</h4>
+                    <p>cidade, UF</p>
+                    <p class="link textEnd">ver mais</p>
+                </div>
+            </a>
+        </section>
+        <section id="right-panel" class="form">
+            <div class="flex justBetween">
+                <div class="itemForm">
+                    <label for="inpNome">Nome</label>
+                    <input type="text" name="inpNome" id="inpNome">
+                </div>
+                <div class="itemForm">
+                    <label for="inpNascimento">Nascimento</label>
+                    <input type="date" name="inpNascimento" id="inpNascimento">
+                </div>
+            </div>
+            <div class="itemForm">
+                <label for="inpDescricao">Descrição</label>
+                <textarea name="inpDescricao" id="inpDescricao" rows="2"></textarea>
+            </div>
+            <div class="grid2">
+                <div class="itemForm">
+                    <label for="selGenero">Gênero</label>
+                    <select name="selGenero" id="selGenero"><option value="0">Selecione</option></select>
+                </div>
+                <div class="itemForm">
+                    <label for="selEspecie">Espécie</label>
+                    <select name="selEspecie" id="selEspecie"><option value="0">Selecione</option></select>
+                </div>
+                <div class="itemForm">
+                    <label for="selRaca">Raça</label>
+                    <select name="selRaca" id="selRaca"><option value="0">Selecione</option></select>
+                </div>
+                <div class="itemForm">
+                    <label for="selPorte">Porte</label>
+                    <select name="selPorte" id="selPorte"><option value="0">Selecione</option></select>
+                </div>
+                <div class="flex justCenter alignCenter">
+                    <input type="checkbox" name="chkCastrado" id="chkCastrado">
+                    <label for="chkCastrado">Castrado</label>
+                </div>
+            </div>
+            <div class="itemForm">
+                <label for="inpVacinas">Vacina(s) do animal</label>
+                <input type="text" id="inpVacinas" list="listVacinas">
+                <datalist id="listVacinas">
+                    <option cd="1" value="AAAA"></option>
+                    <option cd="2" value="BBBB"></option>
+                    <option cd="3" value="CCCC"></option>
+                    <option cd="4" value="DDDD"></option>
+                    <option cd="5" value="EEEE"></option>
+                </datalist>
+                <div id="vacinas-panel" class="list">
+                    <p class="msg-sem-vacina textCenter">Sem vacinas</p>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<script id="script-page" remove="false"></script>

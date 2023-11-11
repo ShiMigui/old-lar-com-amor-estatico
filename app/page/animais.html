@@ -1,0 +1,63 @@
+<title>Animais</title>
+
+<div id="pesquisa" remove="true"></div>
+
+<nav>
+    <div id="animais" ativo="true"></div>
+</nav>
+
+<main class="limiter">
+    <article class="content-box filtros" id="campo-pesquisa">
+        <div>
+            <input type="text">
+            <input type="image" src="./img/icons/search.png" alt="Ícone de lupa para pesquisa">
+        </div>
+        <div class="grid4">
+            <div class="itemForm">
+                <label for="selGenero">Gênero</label>
+                <select name="selGenero" id="selGenero">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+            <div class="itemForm">
+                <label for="selEspecie">Espécie</label>
+                <select name="selEspecie" id="selEspecie">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+            <div class="itemForm">
+                <label for="selRaca">Raça</label>
+                <select name="selRaca" id="selRaca">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+            <div class="itemForm">
+                <label for="selPorte">Porte</label>
+                <select name="selPorte" id="selPorte">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+        </div>
+    </article>
+    <article class="content-box">
+        <section class="grid6" sg="a">
+            <a href="./animal.html" cd="" class="animalAnuncio">
+                <div class="images"><img class="animalPhoto photo" src="" alt=""></div>
+                <div class="texts">
+                    <h4>Nome</h4>
+                    <p>idade</p>
+                    <p class="link textEnd">ver mais</p>
+                </div>
+            </a>
+            <a href="./animal.html" cd="" class="animalAnuncio">
+                <div class="images"><img class="animalPhoto photo" src="" alt=""></div>
+                <div class="texts">
+                    <h4>Nome</h4>
+                    <p>idade</p>
+                    <p class="link textEnd">ver mais</p>
+                </div>
+            </a>
+        </section>
+        <section class="buttons"><button class="btnMaisAnuncios">Carregar mais</button></section>
+    </article>
+</main>

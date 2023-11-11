@@ -14,3 +14,13 @@ if (arrowDown != null) {
         ativarElemento(arrowDown, ic);
     })
 }
+
+const pesquisa =document.getElementById("pesquisa");
+if(pesquisa !=null){
+    const inp = pesquisa.querySelector("input[type=text]");
+    const btn = pesquisa.querySelector("input[type=image]");
+    btn.addEventListener("click", (e)=>{
+        e.preventDefault();
+        if(inp.value) window.location = `./reposta.html?txt=${inp.value}`;
+    })
+}

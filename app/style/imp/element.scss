@@ -1,11 +1,20 @@
 input[type=image],
 input[type=text],
+input[type=date],
+textarea,
+select,
 .input {
     background-color: white;
     border-radius: 10px;
+    overflow-y: hidden;
     transition: 0.3s;
     padding: 5px;
     border: none;
+
+    &:disabled {
+        background-color: transparent;
+        color: #000000;
+    }
 }
 
 input[type=submit],
@@ -43,4 +52,30 @@ button {
     width: 100%;
     max-width: 1200px;
     margin-inline: auto;
+}
+
+label, .lbl{
+    font-size: 0.8em;
+}
+
+.itemForm {
+    width: 100%;
+
+    label {
+        width: 100%;
+    }
+
+    &:not(.line) {
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: right
 }

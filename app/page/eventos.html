@@ -1,0 +1,58 @@
+<title>Eventos</title>
+
+<div id="pesquisa" remove="true"></div>
+
+<nav>
+    <div id="eventos" ativo="true"></div>
+</nav>
+
+<main class="limiter">
+    <article class="content-box filtros" id="campo-pesquisa">
+        <div>
+            <input type="text">
+            <input type="image" src="./img/icons/search.png" alt="Ícone de lupa para pesquisa">
+        </div>
+        <div class="grid4">
+            <div class="itemForm">
+                <label for="selTipo">Tipo de evento</label>
+                <select name="selTipo" id="selTipo">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+            <div class="itemForm">
+                <label for="selEstado">Estado</label>
+                <select name="selEstado" id="selEstado">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+            <div class="itemForm">
+                <label for="selCidade">Cidade</label>
+                <select name="selCidade" id="selCidade">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+        </div>
+    </article>
+
+    <article class="content-box">
+        <section class="grid4" sg="e">
+            <a href="./evento.html" cd="" class="eventoAnuncio">
+                <div class="images"><img class="eventoPhoto photo" src="" alt=""></div>
+                <div class="texts">
+                    <h4>Nome</h4>
+                    <p>date</p>
+                    <p class="link textEnd">ver mais</p>
+                </div>
+            </a>
+            <a href="./evento.html" cd="" class="eventoAnuncio">
+                <div class="images"><img class="eventoPhoto photo" src="" alt=""></div>
+                <div class="texts">
+                    <h4>Nome</h4>
+                    <p>date</p>
+                    <p class="link textEnd">ver mais</p>
+                </div>
+            </a>
+        </section>
+        <section class="buttons"><button class="btnMaisAnuncios">Carregar mais</button></section>
+    </article>
+</main>

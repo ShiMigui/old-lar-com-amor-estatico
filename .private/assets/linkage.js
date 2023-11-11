@@ -13,7 +13,7 @@ const { JSDOM } = require("jsdom");
 // tab-list (params: href)
 // tab (params: tab)
 
-module.exports = function linkage(fName = "") {
+module.exports = function linkage(fName = "", retirarAts = false) {
 
     let domIndex, domPage;
     let docIndex, docPage;
@@ -33,11 +33,13 @@ module.exports = function linkage(fName = "") {
     let tabs = docIndex.querySelectorAll("tab-list");
     for (let list of tabs) carregarTabList(list);
 
-    /*docIndex.querySelectorAll("[link],[processed],[remove]").forEach(link => {
-        link.removeAttribute("link");
-        link.removeAttribute("processed");
-        link.removeAttribute("remove");
-    });*/
+    if (retirarAts) {
+        docIndex.querySelectorAll("[link],[processed],[remove]").forEach(link => {
+            link.removeAttribute("link");
+            link.removeAttribute("processed");
+            link.removeAttribute("remove");
+        });
+    }
 
     let strContent = domIndex.serialize();
     strContent = strContent.replace(/FILENAME/g, fName.replace(".html", ""));
@@ -69,7 +71,7 @@ module.exports = function linkage(fName = "") {
             return;
         }
 
-        element.querySelectorAll("[link]").forEach(link => carregarElemento(link));
+        element.querySelectorAll("[link]").forEach(el => carregarElemento(el));
 
         for (let i = 0; i < elPage.attributes.length; i++) {
             const attribute = elPage.attributes[i];
@@ -86,16 +88,16 @@ module.exports = function linkage(fName = "") {
             console.error("Invalid elementTab");
             return;
         }
-    
+
         const tabs = elementTab.querySelectorAll("tab");
         let href = elementTab.getAttribute("href") || './FILENAME.html';
-    
+
         // Log para rastrear a execução da função
         console.log(`Loaded tabs for element: ${elementTab.id || elementTab.tagName}`);
-    
+
         for (let tab of tabs) {
             const vl = tab.getAttribute("tab") || tab.id;
-    
+
             // Verificar se vl está presente
             if (vl) {
                 const a = docPage.createElement("a");
@@ -106,5 +108,5 @@ module.exports = function linkage(fName = "") {
             }
         }
     }
-    
+
 }
