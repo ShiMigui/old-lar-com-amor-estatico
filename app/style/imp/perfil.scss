@@ -1,0 +1,54 @@
+#campo-pesquisa {
+    max-width: 500px;
+    margin-inline: auto;
+
+    &>*:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &>div:first-child {
+        width: 100%;
+        display: flex;
+
+        input {
+            height: 30px;
+        }
+
+        :first-child {
+            width: 100%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        :last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+#anuncio-panel {
+    gap: 10px;
+
+    #left-panel {
+        width: 30%;
+
+        .organizacaoAnuncio {
+            margin-top: 10px;
+            flex-direction: row-reverse;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 200px;
+            align-items: center ;
+
+            .images {
+                width: 30%;
+                min-width: 30%;
+            }
+        }
+    }
+
+    #right-panel {
+        width: 70%;
+        padding: 10px;
+    }
+}

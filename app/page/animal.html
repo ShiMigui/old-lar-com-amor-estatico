@@ -15,7 +15,7 @@
             </a>
         </section>
         <section id="right-panel" class="form">
-            <div class="flex justBetween">
+            <div class="grid2">
                 <div class="itemForm">
                     <label for="inpNome">Nome</label>
                     <input type="text" name="inpNome" id="inpNome">
@@ -23,6 +23,10 @@
                 <div class="itemForm">
                     <label for="inpNascimento">Nascimento</label>
                     <input type="date" name="inpNascimento" id="inpNascimento">
+                </div>
+                <div class="flex alignCenter">
+                    <input type="checkbox" name="chkCastrado" id="chkCastrado">
+                    <label for="chkCastrado">Castrado</label>
                 </div>
             </div>
             <div class="itemForm">
@@ -46,25 +50,86 @@
                     <label for="selPorte">Porte</label>
                     <select name="selPorte" id="selPorte"><option value="0">Selecione</option></select>
                 </div>
-                <div class="flex justCenter alignCenter">
-                    <input type="checkbox" name="chkCastrado" id="chkCastrado">
+                <div class="itemForm">
+                    <label for="inpVacinas">Vacina(s) do animal</label>
+                    <input type="text" id="inpVacinas" list="listVacinas">
+                    <datalist id="listVacinas">
+                        <option cd="1" value="AAAA"></option>
+                        <option cd="2" value="BBBB"></option>
+                        <option cd="3" value="CCCC"></option>
+                        <option cd="4" value="DDDD"></option>
+                        <option cd="5" value="EEEE"></option>
+                    </datalist>
+                    <div id="vacinas-panel" class="list">
+                        <p class="msg-sem-vacina">Sem vacinas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="addAnimal">Salvar</button>
+            </div>
+        </section>
+    </article>
+
+    <!-- ANUNCIO USER -->
+
+    <article class="content-box flex" id="anuncio-panel">
+        <section id="left-panel">
+            <img src="" alt="" class="animalPhoto">
+
+            <a href="./organizacao.html" cd="" class="organizacaoAnuncio">
+                <div class="images"><img class="organizacaoPhoto" src="" alt=""></div>
+                <div class="texts">
+                    <h4>Nome</h4>
+                    <p>cidade, UF</p>
+                    <p class="link textEnd">ver mais</p>
+                </div>
+            </a>
+        </section>
+        <section id="right-panel" class="form">
+            <div class="grid2">
+                <div class="itemForm">
+                    <label for="inpNome">Nome</label>
+                    <p>Nome do animal</p>
+                </div>
+                <div class="itemForm">
+                    <label for="inpNascimento">Nascimento</label>
+                    <p>06/09/2005</p>
+                </div>
+                <div class="itemForm">
                     <label for="chkCastrado">Castrado</label>
+                    <p>Castrado</p>
                 </div>
             </div>
             <div class="itemForm">
-                <label for="inpVacinas">Vacina(s) do animal</label>
-                <input type="text" id="inpVacinas" list="listVacinas">
-                <datalist id="listVacinas">
-                    <option cd="1" value="AAAA"></option>
-                    <option cd="2" value="BBBB"></option>
-                    <option cd="3" value="CCCC"></option>
-                    <option cd="4" value="DDDD"></option>
-                    <option cd="5" value="EEEE"></option>
-                </datalist>
-                <div id="vacinas-panel" class="list">
-                    <p class="msg-sem-vacina textCenter">Sem vacinas</p>
+                <label for="inpDescricao">Descrição</label>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, quo fugiat sapiente, harum itaque dolor enim iusto repudiandae doloremque quis quaerat. A facilis quisquam nulla fugit, unde quaerat numquam aut!</p>
+            </div>
+            <div class="grid2">
+                <div class="itemForm">
+                    <label for="selGenero">Gênero</label>
+                    <p>Macho</p>
+                </div>
+                <div class="itemForm">
+                    <label for="selEspecie">Espécie</label>
+                    <p>Cachorro</p>
+                </div>
+                <div class="itemForm">
+                    <label for="selRaca">Raça</label>
+                    <p>Golden Retriever</p>
+                </div>
+                <div class="itemForm">
+                    <label for="selPorte">Porte</label>
+                    <p>Grande</p>
+                </div>
+                <div class="itemForm">
+                    <label for="inpVacinas">Vacina(s) do animal</label>
+                    <div id="vacinas-panel" class="list">
+                        <p class="msg-sem-vacina">Sem vacinas</p>
+                    </div>
                 </div>
             </div>
+            <div class="buttons"><a href="forms.html" class="button">Pedir adoção</a></div>
         </section>
     </article>
 </main>

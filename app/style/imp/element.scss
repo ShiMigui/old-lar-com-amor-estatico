@@ -1,6 +1,7 @@
 input[type=image],
 input[type=text],
 input[type=date],
+input[type=time],
 textarea,
 select,
 .input {
@@ -27,6 +28,7 @@ button {
     color: white;
     padding: 10px;
     border: none;
+    display: inline-block;
 
     &:active,
     &:disabled {
@@ -78,4 +80,39 @@ label, .lbl{
 .buttons {
     display: flex;
     justify-content: right
+}
+
+.form {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+datalist {
+    display: block;
+    height: 0;
+}
+
+.list {
+    gap: 2px;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+
+    .item-list {
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        padding: 5px;
+
+        &.dark {
+            background-color: rgba($orange, 0.2);
+        }
+    }
+}
+
+.pointer {
+    cursor: pointer;
 }

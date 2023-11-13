@@ -39,6 +39,10 @@
     gap: 10px;
     display: grid;
     grid-template-columns: repeat(var(--grid), 1fr);
+
+    &>img {
+        width: 100%;
+    }
 }
 
 .grid2 {
@@ -51,13 +55,37 @@
     --grid: 4;
 }
 
+.input-line{
+    display: flex;
+    :first-child{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    :last-child{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .input-line-25{width: 25%;}
+    .input-line-50{width: 50%;}
+    .input-line-75{width: 75%;}
+    .input-line-100{width: 100%;}
+}
+
 .grid6 {
     @extend .grid;
     --grid: 6;
 }
 
 @media screen and (max-width: 600px) {
-    .grid2{--grid:1;}
-    .grid4{--grid:2;}
-    .grid6{--grid:3;}
+    .grid2 {
+        --grid: 1;
+    }
+
+    .grid4 {
+        --grid: 2;
+    }
+
+    .grid6 {
+        --grid: 3;
+    }
 }

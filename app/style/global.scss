@@ -4,36 +4,14 @@
 @import "./imp/header.scss";
 @import "./imp/texto.scss";
 @import "./imp/anuncio.scss";
-
-.list {
-    gap: 2px;
-    display: flex;
-    padding: 5px;
-    flex-direction: column;
-
-    .item-list {
-        height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 5px;
-        padding: 5px;
-
-        &.dark {
-            background-color: rgba($orange, 0.2);
-        }
-    }
-}
-
-.pointer {
-    cursor: pointer;
-}
+@import "./imp/perfil.scss";
 
 * {
     font-family: "Karla", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-size: 16px;
 }
 
 body {
@@ -48,65 +26,16 @@ main {
     }
 }
 
-#campo-pesquisa {
-    max-width: 500px;
-    margin-inline: auto;
-
-    &>*:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    &>div:first-child {
-        width: 100%;
-        display: flex;
-
-        input {
-            height: 30px;
-        }
-
-        :first-child {
-            width: 100%;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        :last-child {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-    }
+.padding-top{
+    padding-top: 10px;
 }
 
-#anuncio-panel {
-    gap: 10px;
-
-    #left-panel {
-        width: 30%;
-
-        .organizacaoAnuncio {
-            margin-top: 10px;
-            flex-direction: row-reverse;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 200px;
-            align-items: center ;
-
-            .images {
-                width: 30%;
-                min-width: 30%;
-            }
-        }
+.add-button{
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.1);
     }
-
-    #right-panel {
-        width: 70%;
-        padding: 10px;
-    }
-}
-
-.form {
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
 @media screen and (max-width: 600px) {
@@ -120,7 +49,21 @@ main {
     }
 }
 
-datalist {
-    display: block;
-    height: 0;
+tab-list{
+    display: flex;
+    gap: 10px;
+    tab{
+        display: block;
+        padding: 10px;
+        transition: 0.3s;
+        a{
+            color: black;
+        }
+        &[selected=true]{
+            border-bottom: 2px solid $orange;
+        }
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
 }
