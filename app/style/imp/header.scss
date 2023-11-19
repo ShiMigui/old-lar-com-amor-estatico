@@ -110,8 +110,6 @@ footer {
 
         #menu-hamburguer {
             width: 24px;
-            display: flex;
-            flex-direction: column;
 
             &[ativo=false] {
                 justify-content: space-between;
@@ -119,7 +117,6 @@ footer {
 
             &[ativo=true] {
                 justify-content: center;
-                align-items: center;
 
                 .line:nth-child(1) {
                     display: none;

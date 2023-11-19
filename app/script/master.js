@@ -54,13 +54,7 @@ function calcHour(hora = 0, minuto = 0) {
     return `${duasCasas(HOUR)}:${duasCasas(MINUTE)}`;
 }
 
-function showMessage(){
-    const message = document.getElementById("message");
-    if (!message) return;
-    if (message.getAttribute("ativo") === "true") {
-        message.classList.add("showMessage");
-        setTimeout(() => message.classList.remove("showMessage"), 5000)
-    }
-}
 
-showMessage();
+// Exemplo de uso:
+// console.log(calcHour(11, 60));
+// console.log(calcDate(0, 2, 0));

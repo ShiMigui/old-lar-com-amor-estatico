@@ -1,11 +1,11 @@
 {
   "name": "linkapp",
-  "description": "O LinkApp é um assistente de desenvolvimento de páginas web estáticas em Node.js, projetado para simplificar a criação de páginas web. Esqueça a complexidade do código HTML e concentre-se no que realmente importa. Com o LinkApp, você pode escrever o conteúdo importante diretamente em sua página principal, economizando tempo e esforço no desenvolvimento de páginas estáticas.",
-  "version": "1.0.2",
+  "version": "1.0.4",
+  "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "watch": "node .private/dev/watch.js"
+    "build": "node .link/dev/build.js",
+    "watch": "node .link/dev/watch.js"
   },
   "keywords": [],
   "author": "",
