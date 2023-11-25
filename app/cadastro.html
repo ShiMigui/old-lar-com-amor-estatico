@@ -1,0 +1,60 @@
+<head>
+    <title>Cadastro</title>
+</head>
+<header link-remove="true"></header>
+<footer link-remove="true"></footer>
+<main class="grid2 forms alignCenter">
+    <div class="flex justCenter">
+        <a href="./index.aspx"><img src="./img/icons/logo.png" alt="ícone logotipo"></a>
+    </div>
+    <section class="form justCenter">
+        <div class="itemForm">
+            <label for="inpNome">Nome</label>
+            <input type="text" id="inpNome" required>
+        </div>
+
+        <div class="itemForm">
+            <label for="inpCNPJ">CNPJ</label>
+            <input type="text" id="inpCNPJ" required>
+        </div>
+
+        <div class="itemForm">
+            <label for="inpEmail">Email</label>
+            <input type="text" id="inpEmail" required>
+        </div>
+
+        <div class="itemForm">
+            <label for="inpCep">CEP</label>
+            <input type="text" id="inpCep" required>
+        </div>
+        <div class="grid2">
+            <div class="itemForm">
+                <label for="inpEstado">UF</label>
+                <input type="text" id="inpEstado" disabled>
+            </div>
+            <div class="itemForm">
+                <label for="inpCidade">Cidade</label>
+                <input type="text" id="inpCidade" disabled>
+            </div>
+            <div class="itemForm all-grid">
+                <label for="inpRua">Rua</label>
+                <input type="text" id="inpRua" disabled>
+            </div>
+        </div>
+
+        <div class="itemForm">
+            <label for="inpSenha">Senha</label>
+            <input type="password" id="inpSenha" required>
+        </div>
+
+        <div class="itemForm">
+            <label for="inpSenha2">Confirme a senha</label>
+            <input type="password" id="inpSenha2" required>
+        </div>
+
+        <div class="flexColumn alignEnd">
+            <button id="btnCadastro">Cadastrar-se</button>
+            <a href="./login.aspx">Já tenho uma conta</a>
+        </div>
+    </section>
+</main>
