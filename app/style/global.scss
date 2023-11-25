@@ -16,6 +16,9 @@
 
 body {
     background-color: rgb(240, 240, 240);
+    &.forms{
+        background-color: $orange;
+    }
 }
 
 main {
@@ -23,6 +26,49 @@ main {
 
     .content-box {
         margin: 25px 0;
+    }
+
+    &.forms{
+        width: 100%;
+        background-color: $orange;
+    }
+}
+
+.meia-tela{
+    width: 50%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 50%;
+}
+
+
+
+header .limiter, #account, header #campo-navegacao, #account img{
+    height: 100%;
+}
+
+.miniAnuncio{
+    padding:10px;
+}
+.miniAnuncio .images {
+    width: 30%;
+}
+
+#message{
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: calc($alt-header + 10px);
+    right: -100%;
+
+    &.error{
+        background-color: red;
+    }
+    &.success{
+        background-color: green;
     }
 }
 
@@ -39,6 +85,11 @@ main {
 }
 
 @media screen and (max-width: 600px) {
+    .meia-tela{
+        width: 100%;
+        min-height: auto;
+    }
+
     #anuncio-panel {
         flex-wrap: wrap;
 
