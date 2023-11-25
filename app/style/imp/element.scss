@@ -75,9 +75,11 @@ label,
         width: 100%;
     }
 }
-.border-radius{
+
+.border-radius {
     border-radius: 10px;
 }
+
 .buttons {
     display: flex;
     justify-content: right
@@ -87,7 +89,7 @@ label,
     gap: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 50px;
     background-color: #f3f3f3;
     min-height: 100vh;
 }
