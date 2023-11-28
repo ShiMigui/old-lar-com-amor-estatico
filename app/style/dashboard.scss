@@ -11,7 +11,7 @@ $space: 30px;
 $orange: #fe7f2d;
 
 main {
-    #infos {
+    article {
         display: flex;
         gap: $space;
         & > section:first-child {
@@ -25,45 +25,45 @@ main {
             position: sticky;
             top: 70px;
         }
-
-        .box {
-            background-color: white;
-            border-radius: 10px;
-            height: max-content;
-            padding: 20px;
-
-            .info:not(:last-child) {
-                margin-bottom: 20px;
-            }
-
-            li {
-                display: flex;
-                align-items: center;
-                transition: 0.3s;
-                padding: 5px;
-
-                a {
-                    color: black;
-                    margin: 0;
-                }
-
-                img {
-                    height: 100%;
-                    margin-right: 5px;
-                }
-
-                &.link:hover {
-                    background-color: rgba(0, 0, 0, 0.05);
-                }
-            }
-        }
-
-        td {
-            text-align: center;
-        }
-        
     }
 }
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    height: max-content;
+    padding: 20px;
+
+    .info:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+        padding: 5px;
+
+        a {
+            color: black;
+            margin: 0;
+        }
+
+        img {
+            height: 100%;
+            margin-right: 5px;
+        }
+
+        &.link:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+td {
+    text-align: center;
+}
+
 .icon-accept-order,
 .icon-refuse-order {
     cursor: pointer;
