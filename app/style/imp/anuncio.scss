@@ -38,7 +38,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3em;
 }
 
 .animalAnuncio {
@@ -55,6 +54,7 @@
     @extend .anuncio;
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
+    font-size: 2em;
 }
 
 .organizacaoPhoto {

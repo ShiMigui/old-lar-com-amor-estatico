@@ -31,24 +31,15 @@
     gap: 10px;
 
     #left-panel {
-        width: 30%;
+        width: 20%;
 
-        .organizacaoAnuncio {
-            margin-top: 10px;
-            flex-direction: row-reverse;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 200px;
-            align-items: center ;
-
-            .images {
-                width: 30%;
-                min-width: 30%;
-            }
+        &>img{
+            width: 100%;
         }
     }
 
     #right-panel {
-        width: 70%;
+        width: 80%;
         padding: 10px;
     }
 }
