@@ -8,77 +8,94 @@ li {
 }
 
 $space: 30px;
-$orange: #FE7F2D;
+$orange: #fe7f2d;
 
 main {
-    display: flex;
-    gap: $space;
-
-    &>section:first-child {
-        width: 75%;
+    & > article {
         display: flex;
-        flex-direction: column;
         gap: $space;
-    }
-
-    .box {
-        background-color: white;
-        border-radius: 10px;
-        height: max-content;
-        padding: 20px;
-
-        .info:not(:last-child) {
-            margin-bottom: 20px;
-        }
-
-        li {
+        & > section:first-child {
+            width: 80%;
             display: flex;
-            align-items: center;
-            transition: 0.3s;
-            padding: 5px;
+            flex-direction: column;
+            gap: $space;
+        }
+        & > section:last-child {
+            width: 20%;
+            position: sticky;
+            top: 70px;
+        }
 
-            a {
-                color: black;
-                margin: 0;
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            height: max-content;
+            padding: 20px;
+
+            .info:not(:last-child) {
+                margin-bottom: 20px;
             }
 
-            img {
-                height: 100%;
-                margin-right: 5px;
-            }
+            li {
+                display: flex;
+                align-items: center;
+                transition: 0.3s;
+                padding: 5px;
 
-            &.link:hover {
-                background-color: rgba(0, 0, 0, 0.05);
+                a {
+                    color: black;
+                    margin: 0;
+                }
+
+                img {
+                    height: 100%;
+                    margin-right: 5px;
+                }
+
+                &.link:hover {
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
             }
         }
-    }
 
-    &>section:last-child {
-        width: 25%;
-        position: sticky;
-        top: 70px;
+        td {
+            text-align: center;
+        }
+        
     }
+}
+.icon-accept-order,
+.icon-refuse-order {
+    cursor: pointer;
+}
 
-    td{
-        text-align: center;
-    }
+
+.opacity-0{
+    opacity: 0;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse; 
+    border-collapse: collapse;
 
-    td, th {
+    td,
+    th {
         padding: 10px;
     }
+    tr{
+        transition: 0.3s;
+        &.dark {
+            background-color: rgba($orange, 0.1);
+        }
+    }
 
-    thead tr th{
+    thead tr th {
         background-color: $orange;
         color: white;
-        &:first-child{
+        &:first-child {
             border-top-left-radius: 10px;
         }
-        &:last-child{
+        &:last-child {
             border-top-right-radius: 10px;
         }
     }
