@@ -1,0 +1,85 @@
+.limiter-90pc {
+    width: 90%;
+    margin-inline: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+$space: 30px;
+$orange: #FE7F2D;
+
+main {
+    display: flex;
+    gap: $space;
+
+    &>section:first-child {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        gap: $space;
+    }
+
+    .box {
+        background-color: white;
+        border-radius: 10px;
+        height: max-content;
+        padding: 20px;
+
+        .info:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            padding: 5px;
+
+            a {
+                color: black;
+                margin: 0;
+            }
+
+            img {
+                height: 100%;
+                margin-right: 5px;
+            }
+
+            &.link:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+
+    &>section:last-child {
+        width: 25%;
+        position: sticky;
+        top: 70px;
+    }
+
+    td{
+        text-align: center;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+
+    td, th {
+        padding: 10px;
+    }
+
+    thead tr th{
+        background-color: $orange;
+        color: white;
+        &:first-child{
+            border-top-left-radius: 10px;
+        }
+        &:last-child{
+            border-top-right-radius: 10px;
+        }
+    }
+}
