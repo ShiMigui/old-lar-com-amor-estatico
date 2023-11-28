@@ -68,35 +68,3 @@ main {
 .icon-refuse-order {
     cursor: pointer;
 }
-
-
-.opacity-0{
-    opacity: 0;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-
-    td,
-    th {
-        padding: 10px;
-    }
-    tr{
-        transition: 0.3s;
-        &.dark {
-            background-color: rgba($orange, 0.1);
-        }
-    }
-
-    thead tr th {
-        background-color: $orange;
-        color: white;
-        &:first-child {
-            border-top-left-radius: 10px;
-        }
-        &:last-child {
-            border-top-right-radius: 10px;
-        }
-    }
-}

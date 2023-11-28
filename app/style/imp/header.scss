@@ -2,11 +2,16 @@ header {
     background-color: $orange;
     height: $alt-header;
     width: 100%;
-    padding: 10px;
+    padding: 0 10px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 20;
+
+    &>.limiter{
+        position: relative;
+        padding: 10px 0;
+    }
 
     a {
         text-decoration: none;
