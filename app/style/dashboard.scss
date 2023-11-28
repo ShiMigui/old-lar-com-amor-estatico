@@ -11,7 +11,7 @@ $space: 30px;
 $orange: #fe7f2d;
 
 main {
-    & > article {
+    #infos {
         display: flex;
         gap: $space;
         & > section:first-child {
